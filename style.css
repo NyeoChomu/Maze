@@ -1,9 +1,12 @@
+h1 {
+    font-size: 100px;
+}
 div {
     text-align: center;
 }
 .comp {
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
     padding: 0px;
     border: 0px;
     margin: 0px;
