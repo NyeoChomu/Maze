@@ -130,7 +130,8 @@ var Button = {
             document.getElementById("table").appendChild(row);
             for (var j = 0; j < lenX; ++j){
                 var block = document.createElement("button");
-                block.innerHTML = "<br>"
+                block.innerHTML = "<br>";
+                block.style.backgroundColor = "white";
                 if (MapInfo[i][j][0] === 1){
                     block.style.backgroundColor = "black";
                 }
@@ -148,11 +149,19 @@ var Button = {
         for (var i = 0; i < lenY; ++i){
             for (var j = 0; j < lenX; ++j){
                 var block = document.getElementById(i+"-"+j);
-                if (MapInfo[i][j][1] === 1) {
-                    block.innerHTML = "■";
+                if (MapInfo[i][j][0] === 0){
+                    block.style.backgroundColor = "white";
                 }
-                else {
-                    block.innerHTML = "<br>";
+                else{
+                    block.style.backgroundColor = "black";
+                }
+                
+                if (MapInfo[i][j][0] === 2) {
+                    block.style.backgroundColor = "green";
+                }
+                
+                if (MapInfo[i][j][1] === 1) {
+                    block.style.backgroundColor = "red";
                 }
             }
         }
